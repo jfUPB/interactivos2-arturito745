@@ -26,6 +26,5 @@
        por el creciente uso de las tecnologías en todos los ámbitos, no está considerado un movimiento artístico, sino que es una simple metodología para obtener contenidos que son creativos. Podría considerarse también como 
        una fusión de arte y diseño.
 
-       ![image](https://github.com/user-attachments/assets/bcbb4e42-509f-45a1-b517-3332c33a2f1f)
-
         fuente del sitio web: https://www.esdesignbarcelona.com/actualidad/diseno/arte-generativo
+![image](https://github.com/user-attachments/assets/bcbb4e42-509f-45a1-b517-3332c33a2f1f)
