@@ -3,6 +3,8 @@
 ##### 1. El arte generativo se refiere a obras de arte que son creadas mediante algoritmos y procesos automáticos. Utilizando códigos y datos, los artistas pueden generar formas, patrones y sonidos que evolucionan y cambian 
          en función de parámetros predefinidos o datos en tiempo real. Este tipo de arte se distingue por su capacidad de producir resultados únicos e impredecibles, desafiando las nociones tradicionales de control y autoría 
          en la creación artística. fuente de la definicion antes vista: https://thebridge.tech/blog/arte-generativo
+         
+![image](https://github.com/user-attachments/assets/977144d7-629d-4ea5-b0af-81259deb5095)
 
          
          
@@ -10,9 +12,9 @@
          El diseño generativo es una tendencia en auge en diversos campos como la ingeniería, arquitectura y arte. Utiliza la inteligencia artificial para generar soluciones de diseño de manera eficiente. A través de 
          algoritmos estructurados y computación en la nube, los diseñadores exploran una amplia gama de posibilidades creativas.
 
-         ![image](https://github.com/user-attachments/assets/97e9c656-3a58-4572-83ba-e61690527a8d)
-
          fuente sitio web: https://www.lobostudio.es/diseno-generativo/
+
+ ![image](https://github.com/user-attachments/assets/97e9c656-3a58-4572-83ba-e61690527a8d)
 
 ##### 3. ¿Qué es el arte generativo?
 
