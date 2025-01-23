@@ -47,3 +47,8 @@
 
 ![image](https://github.com/user-attachments/assets/be3add7f-c46b-4dba-9d97-414eb3bf88f1)
 
+##### CUADRO COMPARATIVO ENTRE ARTE GENERATIVO, DISEÑO GENERATIVO Y ARTE TRADICIONAL. 
+
+
+
+
