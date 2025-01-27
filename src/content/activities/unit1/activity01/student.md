@@ -51,5 +51,9 @@
 
 ![image](https://github.com/user-attachments/assets/d887f046-5458-48e6-a79e-ae8609d0d8da)
 
+###### ¿ Para mi que es el diseño generativo ?
 
+El diseño generativo es emocionante porque combina incertidumbre y creatividad, ofreciendo resultados inesperados que trascienden los límites del arte tradicional. Con algoritmos diseñados para ser flexibles y no rígidos, se pueden explorar formas, patrones y conceptos que antes eran imposibles de imaginar porque no tenemos el control absoluto.  
+
+Aplicado a las experiencias interactivas, el arte generativo puede captar la atención y causar un impacto profundo en las personas. Tiene el poder de romper la monotonía y provocar emociones únicas, sorprendiendo con algo nunca antes visto. Es una herramienta para conectar con el público de una manera novedosa, ofreciendo entretenimiento y momentos memorables que resuenan más allá de la experiencia inmediata.😊
 
