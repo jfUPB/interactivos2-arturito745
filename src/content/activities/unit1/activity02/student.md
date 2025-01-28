@@ -26,7 +26,8 @@ URL: https://jonmccormack.info/project/morphogenesis-series
 Descripcion: Utiliza software personalizado para simular el crecimiento de especies nativas australianas a través de un "ADN digital". Este ADN puede mutar y evolucionar, creando versiones surrealistas de la flora que, aunque estructuralmente coherentes, no podrían existir en la naturaleza. Las imágenes generadas se imprimen como fotografías archivables.
 
 
-![image](../../../../assets/Actividad1/IMG2#2.jpg)
+![image](../../../../assets/Actividad1/IMG2#2.webb
+)
 
 Porque me llamo la atencion: Lo que me encanta de este proyecto es que, gracias a la programación, se logran crear plantas y fauna que parecen de otro planeta. Los tonos verdes brillantes y los patrones especiales me fascinan, ya que tienen una vibración única. Los colores naturales y vibrantes le dan una sensación de frescura y belleza que me atrae mucho.
 
@@ -40,6 +41,7 @@ URL: https://scottdraves.com/fuse
 
 Descripcion: La obra utiliza el algoritmo **Fuse** para crear un autorretrato a partir de un primer plano de los ojos del artista. Las piezas de la imagen se reorganizan para aproximarse a la fotografía original, creando una representación visual compleja. Este proceso refleja la vulnerabilidad del artista mientras parece observarnos desde diferentes ángulos.
 
+![image](../../../../assets/Actividad1/IMG2#3.jpg)
 
 Porque me llamo la atencion: Me encanta esta obra porque transforma los ojos del artista en un mosaico único, mostrando vulnerabilidad y profundidad. Es como si el algoritmo no solo reconstruyera la imagen, sino que también reflejara distintas perspectivas del artista.
 
