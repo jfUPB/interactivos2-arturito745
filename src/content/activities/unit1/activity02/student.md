@@ -10,5 +10,5 @@ Descripcion: El proyecto crea retratos generativos a partir de las descripciones
 
 #### I AM.
 
-![image](../../../../assets/Actividad1/IMG1#2.png)
+![image](../../../../assets/Actividad1/IMG1#2.jpg)
 
