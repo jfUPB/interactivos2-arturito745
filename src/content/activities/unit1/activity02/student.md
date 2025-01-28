@@ -39,7 +39,7 @@ URL: https://scottdraves.com/fuse
 
 Descripcion: La obra utiliza el algoritmo **Fuse** para crear un autorretrato a partir de un primer plano de los ojos del artista. Las piezas de la imagen se reorganizan para aproximarse a la fotografía original, creando una representación visual compleja. Este proceso refleja la vulnerabilidad del artista mientras parece observarnos desde diferentes ángulos.
 
-![image](../../../../assets/Actividad1/IMG2-3.jpg)
+![image](../../../../assets/Actividad1/IMG3-2.jpg)
 
 Porque me llamo la atencion: Me encanta esta obra porque transforma los ojos del artista en un mosaico único, mostrando vulnerabilidad y profundidad. Es como si el algoritmo no solo reconstruyera la imagen, sino que también reflejara distintas perspectivas del artista.
 
