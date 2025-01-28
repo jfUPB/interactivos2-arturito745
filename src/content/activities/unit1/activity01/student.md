@@ -4,7 +4,7 @@
          en función de parámetros predefinidos o datos en tiempo real. Este tipo de arte se distingue por su capacidad de producir resultados únicos e impredecibles, desafiando las nociones tradicionales de control y autoría 
          en la creación artística. fuente de la definicion antes vista: https://thebridge.tech/blog/arte-generativo
          
-![image](https://github.com/user-attachments/assets/977144d7-629d-4ea5-b0af-81259deb5095)
+![image](../../../../assets/Actividad1/IMG1.png)
 
          
          
