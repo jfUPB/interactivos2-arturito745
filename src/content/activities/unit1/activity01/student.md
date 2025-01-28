@@ -14,7 +14,7 @@
 
          fuente sitio web: https://www.lobostudio.es/diseno-generativo/
 
- ![image](https://github.com/user-attachments/assets/97e9c656-3a58-4572-83ba-e61690527a8d)
+![image](../../../../assets/Actividad1/IMG2.png)
 
 ##### 3. ¿Qué es el arte generativo?
 
@@ -29,7 +29,8 @@
        una fusión de arte y diseño.
 
         fuente del sitio web: https://www.esdesignbarcelona.com/actualidad/diseno/arte-generativo
-![image](https://github.com/user-attachments/assets/bcbb4e42-509f-45a1-b517-3332c33a2f1f)
+![image](../../../../assets/Actividad1/IMG3.png)
+
 
 ##### 4. DEFINICION PATRIK HUEBNER ¨ DISEÑO GENERATIVO ¨
 
@@ -45,11 +46,12 @@
 
       Fuente de esta definicion: https://www.patrik-huebner.com/datadesigndictionary/generative-design/
 
-![image](https://github.com/user-attachments/assets/be3add7f-c46b-4dba-9d97-414eb3bf88f1)
+![image](../../../../assets/Actividad1/IMG4.png)
 
 ##### CUADRO COMPARATIVO ENTRE ARTE GENERATIVO, DISEÑO GENERATIVO Y ARTE TRADICIONAL. 
 
-![image](https://github.com/user-attachments/assets/d887f046-5458-48e6-a79e-ae8609d0d8da)
+![image](../../../../assets/Actividad1/IMG5.png)
+
 
 ###### ¿ Para mi que es el diseño generativo ?
 
