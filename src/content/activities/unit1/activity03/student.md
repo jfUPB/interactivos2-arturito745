@@ -39,7 +39,7 @@ Obra 1: 33 Questions per Minute (2000)
 Técnica: Instalación interactiva. Lozano-Hemmer utiliza un sistema generativo que presenta una serie de preguntas a los espectadores a una velocidad increíblemente rápida, 33 por minuto, mientras que los participantes interactúan con el sistema. El sistema responde a las interacciones del público mediante tecnología de control de voz, lo que agrega una capa de aleatoriedad a las preguntas.
 Herramientas: Tecnología de procesamiento de voz y sensores interactivos. Utilizó dispositivos electrónicos, software de procesamiento y una interfaz que recogía las respuestas de los visitantes y las integraba dentro de la instalación.
 
-![image](../../../../assets/Actividad1/IMG3-3.tif)
+![image](../../../../assets/Actividad1/IMG33.tif)
 
 Obra 2: Pulse Room (2006)
 
