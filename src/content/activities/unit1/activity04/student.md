@@ -39,12 +39,12 @@ function draw() {
     }
   }
 }
-
+```
 #### Descripcion 
 
 
 
-```javascript
+```
 function setup() {
   // Crea un lienzo de 710x400 píxeles en 3D con WEBGL
   createCanvas(710, 400, WEBGL);
