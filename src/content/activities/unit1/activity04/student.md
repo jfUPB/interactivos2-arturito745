@@ -4,6 +4,7 @@ link: https://p5js.org/examples/3d-orbit-control/
 
 #### CODIGO 
 
+```
 function setup() {
   createCanvas(710, 400, WEBGL);
   angleMode(DEGREES);
@@ -91,7 +92,7 @@ function draw() {
 
 ### Resumen de lo que hace el código:
 
-
+```
 function setup() {
   // Crea un lienzo de 710x400 píxeles en 3D con WEBGL
   createCanvas(710, 400, WEBGL);
@@ -144,9 +145,9 @@ function draw() {
    - Crea una esfera de cubos que rotan alrededor de los ejes X y Z.
    
 Cada cubo se dibuja en una posición específica en 3D, y los usuarios pueden verlos desde diferentes ángulos arrastrando el ratón.
-
+```
 #### Modificacion del codigo 
-
+```
 function setup() {
   createCanvas(710, 400, WEBGL); // Crea un lienzo en 3D de 710x400 píxeles
   angleMode(DEGREES); // Usa grados en lugar de radianes para los ángulos
@@ -186,7 +187,7 @@ function draw() {
     }
   }
 }
-
+```
 Aprendi lo siguiente:
 
 - **`setup()`**: Crea el lienzo en 3D y configura el grosor y color de los bordes.
@@ -195,4 +196,4 @@ Aprendi lo siguiente:
 - **`rotateX()` y `rotateZ()`**: Rota las esferas en los ejes X y Z. `translate()` mueve las esferas en el espacio.
 - **`push()` y `pop()`**: Guardan y restauran las transformaciones para que no afecten a otras figuras.
 
-¡Todo listo para trabajar con 3D y crear efectos interactivos!
+
