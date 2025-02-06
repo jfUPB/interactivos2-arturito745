@@ -1,7 +1,7 @@
 ##### 
 ## Generación de patrones visuales
 
-### Mujer 
+# Mujer 
 
 ![image](../../../../assets/Actividad1/IMG1-5.png)
 
