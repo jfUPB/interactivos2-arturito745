@@ -286,3 +286,73 @@ Este código crea una animación interactiva de texto usando p5.js. Muestra el t
 
 ![Captura de pantalla 2025-02-06 153924](https://github.com/user-attachments/assets/e4bd3ae8-8eff-4f26-8498-cf7beeadce35)
 
+
+Los cambios que hice para que las letras y puntos se dibujen en color rojo están en las siguientes funciones, donde se ajustaron las propiedades de fill() y stroke() a los valores 255, 0, 0 (que corresponden al color rojo en formato RGB). Aquí están los detalles de cada parte modificada:
+
+1. Función lines2mouse():
+Cambio: Se ajustó el color de la línea a rojo.
+Código original:
+javascript
+Copiar
+stroke(0);
+Cambio realizado:
+javascript
+Copiar
+stroke(255, 0, 0);  // Rojo en RGB
+Explicación: Esta línea ahora dibuja las líneas en rojo.
+2. Función animatedPoints():
+Cambio: Se cambió el color de los puntos a rojo, tanto para el relleno (fill()) como para el contorno (stroke()).
+Código original:
+javascript
+Copiar
+fill(0);
+stroke(0);
+Cambio realizado:
+javascript
+Copiar
+fill(255, 0, 0);  // Rojo en RGB
+stroke(255, 0, 0); // Rojo en RGB
+Explicación: Los puntos generados por esta función se dibujan ahora en rojo.
+3. Función radialLines():
+Cambio: Se ajustó el color de las líneas radiales a rojo.
+Código original:
+javascript
+Copiar
+stroke(0);
+Cambio realizado:
+javascript
+Copiar
+stroke(255, 0, 0);  // Rojo en RGB
+Explicación: Esta línea radial ahora se dibuja en rojo.
+4. Función wobblyShapes():
+Cambio: Se cambió el color de las formas que se dibujan (triángulos, líneas, etc.) a rojo.
+Código original:
+javascript
+Copiar
+fill(0);
+stroke(0);
+Cambio realizado:
+javascript
+Copiar
+fill(255, 0, 0);  // Rojo en RGB
+stroke(255, 0, 0); // Rojo en RGB
+Explicación: Las formas generadas en esta función se dibujan en rojo.
+5. Función outwardLines():
+Cambio: Se cambió el color de las líneas radiales a rojo.
+Código original:
+javascript
+Copiar
+stroke(0);
+Cambio realizado:
+javascript
+Copiar
+stroke(255, 0, 0);  // Rojo en RGB
+strokeWeight(0.5);
+fill(255, 0, 0); // Rojo en RGB
+Explicación: Esta función también dibuja las líneas que se extienden desde los puntos de forma roja.
+Resumen de los cambios realizados:
+En cada una de estas funciones, el color predeterminado de los puntos, líneas o formas se cambió a rojo usando el valor stroke(255, 0, 0) para el contorno y fill(255, 0, 0) para el relleno.
+¿Por qué se hizo esto?
+El objetivo de los cambios fue hacer que todas las formas que se dibujan en el lienzo (puntos, líneas, y otras formas geométricas) sean de color rojo, independientemente de la forma o del tipo de visualización.
+
+Si tienes alguna pregunta o necesitas alguna modificación adicional, ¡dímelo!
