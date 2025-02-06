@@ -91,6 +91,7 @@ function draw() {
 
 ### Resumen de lo que hace el código:
 
+
 function setup() {
   // Crea un lienzo de 710x400 píxeles en 3D con WEBGL
   createCanvas(710, 400, WEBGL);
@@ -145,3 +146,53 @@ function draw() {
 Cada cubo se dibuja en una posición específica en 3D, y los usuarios pueden verlos desde diferentes ángulos arrastrando el ratón.
 
 #### Modificacion del codigo 
+
+function setup() {
+  createCanvas(710, 400, WEBGL); // Crea un lienzo en 3D de 710x400 píxeles
+  angleMode(DEGREES); // Usa grados en lugar de radianes para los ángulos
+  strokeWeight(2); // Grosor de las líneas (aunque se desactiva después)
+  stroke(255, 200, 150); // Color de borde cálido (pero no se usa porque quitamos los bordes)
+  
+  // Descripción del código
+  describe('Puedes hacer clic y arrastrar para ajustar la vista 3D. Hay una esfera formada por pequeñas esferas sobre un fondo degradado azul.');
+}
+
+function draw() {
+  // Crea un fondo degradado de azul oscuro a azul claro
+  for (let i = 0; i < height; i++) {
+    let inter = map(i, 0, height, 0, 1); // Interpolación entre 0 y 1
+    let c = lerpColor(color(0, 50, 150), color(135, 206, 250), inter); // Genera el degradado
+    stroke(c); // Define el color de la línea
+    line(-width / 2, i - height / 2, width / 2, i - height / 2); // Dibuja una línea horizontal
+  }
+
+  orbitControl(); // Permite mover la vista con el mouse o la pantalla táctil
+
+  noStroke(); // Quita los bordes de las figuras
+  fill(255, 150, 50); // Color de las esferas (naranja cálido)
+
+  // Bucle para crear la esfera formada por pequeñas esferas
+  for (let zAngle = 0; zAngle < 180; zAngle += 30) { // Rotación en el eje Z
+    for (let xAngle = 0; xAngle < 360; xAngle += 30) { // Rotación en el eje X
+      push(); // Guarda el estado de las transformaciones
+
+      rotateZ(zAngle); // Rota la figura en el eje Z
+      rotateX(xAngle); // Rota la figura en el eje X
+      translate(0, 300, 0); // Posiciona las formas lejos del centro
+
+      sphere(20); // Se cambió box() por sphere(), ahora son esferas de radio 20
+
+      pop(); // Restaura el estado original de las transformaciones
+    }
+  }
+}
+
+Aprendi lo siguiente:
+
+- **`setup()`**: Crea el lienzo en 3D y configura el grosor y color de los bordes.
+- **`draw()`**: Dibuja un fondo degradado usando `for`, `map()`, y `lerpColor()`.
+- **`orbitControl()`**: Permite mover la cámara con el ratón. Usamos `noStroke()` para eliminar bordes y `fill()` para darle color a las esferas.
+- **`rotateX()` y `rotateZ()`**: Rota las esferas en los ejes X y Z. `translate()` mueve las esferas en el espacio.
+- **`push()` y `pop()`**: Guardan y restauran las transformaciones para que no afecten a otras figuras.
+
+¡Todo listo para trabajar con 3D y crear efectos interactivos!
