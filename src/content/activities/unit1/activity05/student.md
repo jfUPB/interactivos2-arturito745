@@ -249,3 +249,40 @@ Te explico los puntos clave:
 
 ### En resumen:
 El código utiliza una imagen y la mapea a una cuadrícula de píxeles. Cada píxel se transforma en una figura (línea, círculo, rectángulo) que cambia según su valor en escala de grises. Además, el programa permite cambiar la forma de visualización de la imagen utilizando teclas, moverla con el ratón y guardarla como una imagen final.
+
+
+## P_2_1_1_02
+
+https://editor.p5js.org/generative-design/sketches/P_2_1_1_02
+
+![250206_151432_717](https://github.com/user-attachments/assets/940b2ca6-0751-4bbc-b5eb-ddfcbb34a774)
+
+Este código genera un patrón en una cuadrícula de 20x20 celdas, donde se dibujan líneas diagonales de dos colores (inicialmente azul y verde). El grosor de las líneas depende de la posición del ratón. Los colores y otros aspectos visuales, como la forma de los extremos de las líneas, se pueden cambiar interactivamente usando las teclas del teclado. Al hacer clic, el patrón se reorganiza de manera aleatoria. Además, se puede guardar la imagen como un archivo PNG presionando una tecla.
+
+## Cambio de colores 
+Este cambio se dio en el Set Up 
+Antes:
+  ```
+colorLeft = color(197, 0, 123, alphaLeft);  // Color rosado
+colorRight = color(87, 35, 129, alphaRight);  // Color morado
+  ```
+
+Despues:
+
+  ```
+colorLeft = color(0, 122, 255, alphaLeft);  // Azul
+colorRight = color(34, 193, 64, alphaRight);  // Verde
+
+  ```
+![250206_151116_399](https://github.com/user-attachments/assets/a6fa0969-19a7-4021-87b4-00a0e1057b80)
+
+## P_2_1_1_02
+
+https://editor.p5js.org/arturito745/sketches/S-AuKTOT3
+
+Este código crea una animación interactiva de texto usando p5.js. Muestra el texto "RICARDO" y lo transforma en rutas vectoriales, las cuales se animan de varias formas. Los usuarios pueden manipular la animación usando el teclado (agregar/eliminar texto, cambiar modos de visualización) y el ratón (afectar las formas). Existen diferentes modos de dibujo, como puntos animados, líneas que siguen al ratón, y formas geométricas que se deforman. Los colores de las animaciones son configurables, y el texto se carga como una fuente OpenType.
+
+![Captura de pantalla 2025-02-06 153821](https://github.com/user-attachments/assets/e81fce95-89b5-4ee1-9cec-ec364da34fed)
+
+![Captura de pantalla 2025-02-06 153924](https://github.com/user-attachments/assets/e4bd3ae8-8eff-4f26-8498-cf7beeadce35)
+
