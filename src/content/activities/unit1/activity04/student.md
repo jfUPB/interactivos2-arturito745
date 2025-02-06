@@ -41,7 +41,7 @@ function draw() {
 
 #### Descripcion 
 
-Claro, te dejo el código con comentarios explicativos de cada parte de manera sencilla:
+
 
 ```javascript
 function setup() {
