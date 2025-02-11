@@ -33,3 +33,5 @@ function generateRandomSentence() {
 ```
 
 [Texto del enlace](https://editor.p5js.org/arturito745/sketches/3hCSPonSO)
+
+![imagen](https://github.com/user-attachments/assets/0c7c0423-c119-4198-a1f3-a2e34f70b0f5)
