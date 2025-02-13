@@ -1,7 +1,7 @@
 #####
-# Autoevaluación del Aprendizaje**
+# Autoevaluación del Aprendizaje
 
-**Logros:
+Logros:
 
 - Aprendí a utilizar p5.js para crear experiencias interactivas generativas en tiempo real.
 - Implementé técnicas como:
@@ -12,7 +12,7 @@
 - Experimenté con la interactividad a través de clics y eventos del teclado.
 - Amplié mis conocimientos sobre la programación visual y sonora.
 
-**Dificultades:
+Dificultades:
 
 - Familiarizarme con la sintaxis y la estructura de p5.js.
 - Manipular píxeles y usar osciladores para generar sonido.
@@ -23,7 +23,8 @@
   - Experimentación con pequeños ajustes en mis programas.
   - Práctica constante e iteración de mis proyectos.
 
-**Áreas de mejora:
+Áreas de mejora:
+
 - Mejorar mi comprensión sobre bibliotecas adicionales para ampliar las capacidades de mis proyectos.
 - Profundizar en el control avanzado de interactividad (detección de colisiones, algoritmos generativos más complejos).
 - Optimizar mis códigos para hacerlos más eficientes y modulares.
