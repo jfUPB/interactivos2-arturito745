@@ -187,4 +187,3 @@ Hemos construido una aplicación funcional que permite **enviar imágenes y coor
 - **Compresión de imágenes** para optimizar la transferencia.  
 - **Interfaz más atractiva** con feedback visual en desktop y mobile.  
 
-🔥 **Aplicación lista y funcional!** 🚀 ¿Necesitas más mejoras? 😃
