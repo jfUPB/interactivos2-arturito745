@@ -29,3 +29,4 @@
 - **STUN y TURN servers** para gestionar la conexión entre los peers en diferentes redes.
 - Implementar la API WebRTC para establecer conexiones y transmitir datos/media.
 
+En "Frases del Cora", **WebSocket** se utiliza para gestionar la comunicación en tiempo real entre dos usuarios. Cuando un usuario genera una frase, WebSocket envía ese mensaje al otro usuario, quien puede ver y escuchar la frase en tiempo real. Además, WebSocket facilita el intercambio de datos entre los navegadores para crear una conexión WebRTC, permitiendo la grabación y transmisión de audio. El servidor WebSocket retransmite los mensajes de señalización (como la oferta, respuesta y candidatos ICE) necesarios para establecer la conexión, haciendo posible la interacción fluida entre los usuarios.
