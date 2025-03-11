@@ -71,7 +71,7 @@ io.on('connection', (socket) => {
 
 server.listen(port, () => console.log(`🚀 Servidor en http://localhost:${port}`));
 ```
-###  (Reciben y muestran en consola)**  
+###  (Reciben y muestran en consola) 
 **Ubicación:** `public/desktop/sketch.js` y `public/mobile/sketch.js`  
 
 ```js
@@ -95,5 +95,98 @@ function draw() {
 ---
 
  **Ahora la hora de conexión y desconexión se envía y se ve en la consola.**  
+## Type touch 
 
 
+**Resumen del proceso para quitar `type: 'touch'`**  
+
+ **1️⃣ Eliminamos `type: 'touch'` en `mobile/sketch.js`**  
+- **Borramos** `socket.emit('message', JSON.stringify(touchData))` en `touchMoved()`.  
+- Ahora `mobile` solo envía `{ x, y }` con `socket.emit("posicion_mouse", { x, y })`.  
+
+ **2️⃣ Eliminamos `socket.on('message')` en `desktop/sketch.js`**  
+- **Borramos** la parte donde verificaba `if (parsedData.type === 'touch')`.  
+- Ahora `desktop` recibe `posicion_mouse` directamente y actualiza el círculo.  
+
+ **3️⃣ Eliminamos `socket.on("message")` en `server.js`**  
+- **Borramos** `socket.on('message', ...)` porque ya no se usa.  
+- El servidor ahora solo maneja `posicion_mouse`.  
+
+ **4️⃣ Guardamos y reiniciamos el servidor**  
+```sh
+npm start
+```
+ **¡Listo! Ahora `type: 'touch'` desapareció y el código es más limpio.** 🎉
+Aquí están los **códigos modificados** después de eliminar `type: 'touch'`:  
+
+---
+
+## **📌 1️⃣ `mobile/sketch.js` (Se eliminó `type: 'touch'`)**  
+📌 **Ubicación:** `public/mobile/sketch.js`  
+📌 **Cambios realizados:**  
+✅ **Se eliminó `socket.emit('message', JSON.stringify(touchData))`.**  
+✅ **Ahora solo envía `{ x, y }` con `socket.emit("posicion_mouse", { x, y })`.**  
+
+🔹 **Código corregido:**  
+```js
+function touchMoved() {
+    if (socket && socket.connected) { 
+        let dx = abs(mouseX - lastTouchX);
+        let dy = abs(mouseY - lastTouchY);
+
+        if (dx > threshold || dy > threshold) {
+            socket.emit("posicion_mouse", { x: mouseX, y: mouseY });
+
+            lastTouchX = mouseX;
+            lastTouchY = mouseY;
+        }
+    }
+    return false; // Evita el desplazamiento de la página
+}
+```
+
+---
+
+## **📌 2️⃣ `desktop/sketch.js` (Se eliminó `type: 'touch'`)**  
+📌 **Ubicación:** `public/desktop/sketch.js`  
+📌 **Cambios realizados:**  
+✅ **Se eliminó `socket.on('message')`, que esperaba `type: 'touch'`.**  
+✅ **Ahora `desktop` solo recibe `posicion_mouse`.**  
+
+🔹 **Código corregido:**  
+```js
+socket.on("posicion_mouse", (data) => {
+    console.log(`📍 Movimiento de ${data.usuario}: X=${data.x}, Y=${data.y}`);
+    circleX = data.x;
+    circleY = data.y;
+});
+```
+
+---
+
+## **📌 3️⃣ `server.js` (Se eliminó `socket.on("message")`)**  
+📌 **Ubicación:** Raíz del proyecto  
+📌 **Cambios realizados:**  
+✅ **Se eliminó `socket.on("message")`, que ya no se usaba.**  
+✅ **Ahora el servidor solo maneja `posicion_mouse`.**  
+
+🔹 **Código corregido:**  
+```js
+socket.on("posicion_mouse", (data) => {
+    console.log(`📍 ${nombre} movió el mouse a X=${data.x}, Y=${data.y}`);
+    io.emit("posicion_mouse", { usuario: nombre, x: data.x, y: data.y });
+});
+```
+
+---
+
+## **📌 4️⃣ Guardar y reiniciar el servidor**  
+1️⃣ **Guarda `mobile/sketch.js`, `desktop/sketch.js` y `server.js`.**  
+2️⃣ **Detén el servidor (`Ctrl + C`).**  
+3️⃣ **Ejecuta nuevamente:**  
+```sh
+npm start
+```
+4️⃣ **Recarga `desktop/index.html` y `mobile/index.html` en el navegador.**  
+
+🚀 **¡Listo! Ahora `type: 'touch'` ya no existe y todo funciona correctamente.** 🎉
