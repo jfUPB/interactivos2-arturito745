@@ -1,174 +1,122 @@
+**Propuesta de Aplicación con p5LiveMedia**
 
-### **Descripción de la Aplicación Propuesta**
+### Descripción de la Aplicación
+Se propone una pizarra colaborativa en tiempo real que permita a los usuarios dibujar simultáneamente desde diferentes dispositivos conectados. La aplicación soporta conexiones entre usuarios móviles y de escritorio, diferenciándolos con distintos colores. Esto facilitaría la interacción remota en proyectos educativos y creativos.
 
-**Nombre del Proyecto**: **Frases del Cora**
+### Uso de p5LiveMedia
+La aplicación utiliza la biblioteca p5LiveMedia para compartir en tiempo real los datos de los trazos de dibujo. Cada usuario envía las coordenadas de sus dibujos al servidor, y este las retransmite a todos los demás participantes conectados, asegurando una experiencia sincronizada.
 
-La aplicación permitirá que los usuarios elijan palabras o frases predeterminadas (como "amor", "comprensión", "respeto", etc.), las organicen en una frase personalizada, y luego puedan escuchar la frase leída en voz alta por el navegador. El sistema también presentará la frase en la pantalla con efectos visuales sencillos y, en el futuro, podrá enviar esta creación por correo electrónico.
+### Relación con el Proyecto de Curso
+Esta aplicación está alineada con la necesidad de mejorar la productividad y la colaboración para personas con TDAH. Permite la organización visual de ideas mediante dibujos y esquemas compartidos en tiempo real, promoviendo un aprendizaje interactivo.
 
----
+### Tutorial para Replicar la Aplicación
+1. **Configurar el servidor**
+   - Crear un archivo `server.js` con el siguiente contenido:
+   ```js
+   const express = require('express');
+   const http = require('http');
+   const socketIO = require('socket.io');
+   const path = require('path');
 
-### **Cómo hace uso de p5LiveMedia**
+   const app = express();
+   const server = http.createServer(app);
+   const io = socketIO(server, {
+       cors: {
+           origin: "*",
+           methods: ["GET", "POST"]
+       }
+   });
 
-Aunque **p5LiveMedia** es principalmente una biblioteca para interactuar con audio y video en tiempo real, en este caso la utilizaremos en conjunto con **p5.js** para crear una interfaz interactiva. Utilizaremos **p5LiveMedia** para gestionar la entrada de audio y visualizar el contenido multimedia en la pantalla, como los efectos visuales que acompañan la frase generada.
+   app.use(express.static(path.join(__dirname, 'public')));
 
-En esta fase inicial del proyecto, la interacción con el audio será principalmente para **leer la frase en voz alta** usando la API de **SpeechSynthesis** (nativa de JavaScript), lo que puede ser considerado un "audio en tiempo real" desde la perspectiva del usuario.
+   io.on('connection', (socket) => {
+       console.log(`Nuevo cliente conectado: ${socket.id}`);
+       socket.on('draw', (data) => {
+           socket.broadcast.emit('draw', data);
+       });
+   });
 
----
+   const port = process.env.PORT || 3000;
+   server.listen(port, '0.0.0.0', () => {
+       console.log(`Servidor corriendo en ${process.env.CODESPACE_NAME ? `https://${process.env.CODESPACE_NAME}-3000.github.dev` : `http://localhost:${port}`}`);
+   });
+   ```
 
-### **Relación con el Proyecto de Curso**
+2. **Crear la interfaz en index.html**
+   - Crear un archivo `index.html` dentro de la carpeta `public`:
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="utf-8" />
+       <title>WebRTC con p5.js</title>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+       <script src="/socket.io/socket.io.js"></script>
+       <script src="https://p5livemedia.itp.io/p5livemedia.js"></script>
+       <script src="https://p5livemedia.itp.io/simplepeer.min.js"></script>
+       <script src="https://p5livemedia.itp.io/socket.io.js"></script>
+   </head>
+   <body>
+       <script src="./sketch.js"></script>
+   </body>
+   </html>
+   ```
 
-Este proyecto se alinea perfectamente con el concepto de **interactividad** en tiempo real y **creación de obras multimedia**. Los estudiantes podrán:
+3. **Implementar la lógica en p5.js**
+   - Crear un archivo `sketch.js` en la carpeta `public`. El mismo archivo es utilizado tanto para el cliente de escritorio como para el cliente móvil:
+   ```js
+   let socket;
+   let colorStroke = 'black';
+   let userType = null;
 
-1. Crear una interfaz donde las palabras se seleccionan en tiempo real.
-2. Manipular audio en tiempo real (con el uso de SpeechSynthesis para lectura en voz alta).
-3. Crear efectos visuales interactivos, lo que es una aplicación directa de los conceptos de interacción con medios en vivo.
-4. La escalabilidad del proyecto permitirá agregar características adicionales (como el envío de correos electrónicos) a medida que el curso avance.
+   function setup() {
+       createCanvas(800, 600);
+       background(255);
+       socket = io({
+           path: "/socket.io",
+           transports: ["polling"],
+           reconnection: true,
+           reconnectionAttempts: 10,
+           reconnectionDelay: 1000
+       });
 
----
+       socket.on('draw', (data) => {
+           stroke(data.color);
+           strokeWeight(5);
+           line(data.x1, data.y1, data.x2, data.y2);
+       });
 
-### **Tutorial para Replicar la Aplicación**
+       createButton('Soy Desktop').position(10, 10).mousePressed(() => setUserType('desktop'));
+       createButton('Soy Mobile').position(120, 10).mousePressed(() => setUserType('mobile'));
+   }
 
-#### **1. Instalación de p5.js**
+   function setUserType(type) {
+       userType = type;
+       colorStroke = (type === 'mobile') ? 'lime' : 'black';
+   }
 
-1. Ve a [p5.js](https://p5js.org/download/) y descarga el editor o usa la versión online en [p5.js Web Editor](https://editor.p5js.org/).
-2. Si prefieres trabajar en tu propio entorno, crea una carpeta para tu proyecto y descarga **p5.js** desde su [repositorio](https://github.com/processing/p5.js).
+   function mouseDragged() {
+       if (!userType) return;
+       let data = { x1: pmouseX, y1: pmouseY, x2: mouseX, y2: mouseY, color: colorStroke };
+       stroke(colorStroke);
+       strokeWeight(5);
+       line(data.x1, data.y1, data.x2, data.y2);
+       socket.emit('draw', data);
+   }
+   ```
 
----
-
-#### **2. Crear la Interfaz y Funcionalidad Básica**
-
-**Estructura del Proyecto:**
-- `index.html`: Para la estructura básica de la aplicación.
-- `sketch.js`: Contendrá el código de la aplicación p5.js.
-
-##### **index.html**
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frases del Corazón</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <script src="sketch.js"></script>
-</head>
-<body>
-  <h1>Frases del Corazón</h1>
-  <p>Selecciona algunas palabras para crear tu mensaje personal</p>
-  <div id="word-list"></div>
-</body>
-</html>
-```
-
-##### **sketch.js**
-
-```javascript
-let words = ["amor", "comprensión", "respeto", "te quiero", "te adoro", "contigo me imagino", "te estimo", "estoy orgulloso"];
-let selectedWords = [];
-let userPhrase = "";
-let synth;
-
-function setup() {
-  createCanvas(600, 400);
-  synth = window.speechSynthesis;  // Inicializar SpeechSynthesis
-
-  let yPos = 100;
-  for (let i = 0; i < words.length; i++) {
-    let wordButton = createButton(words[i]);
-    wordButton.position(50, yPos);
-    wordButton.mousePressed(() => addWord(words[i])); // Al hacer clic en la palabra, la agregamos
-    yPos += 40;
-  }
-
-  // Botón para generar la frase
-  let generateButton = createButton("Generar Frase");
-  generateButton.position(50, yPos);
-  generateButton.mousePressed(generatePhrase);
-
-  // Botón para leer la frase en voz alta
-  let readButton = createButton("Leer en voz alta");
-  readButton.position(200, yPos);
-  readButton.mousePressed(speakPhrase);
-}
-
-function addWord(word) {
-  selectedWords.push(word);
-  userPhrase = selectedWords.join(' ');
-  console.log(userPhrase); // Muestra la frase en consola
-}
-
-function generatePhrase() {
-  background(220);
-  textSize(24);
-  textAlign(CENTER);
-  text(userPhrase, width / 2, height / 2);  // Mostrar la frase generada
-
-  // Generar efectos visuales mientras se muestra la frase
-  generateVisualArt(userPhrase);
-}
-
-function generateVisualArt(phrase) {
-  background(220);
-  let wordsArray = phrase.split(" ");
-  for (let i = 0; i < wordsArray.length; i++) {
-    fill(random(255), random(255), random(255)); // Colores aleatorios
-    textSize(30);
-    text(wordsArray[i], random(width), random(height)); // Palabras flotando
-  }
-}
-
-function speakPhrase() {
-  let utterThis = new SpeechSynthesisUtterance(userPhrase);
-  synth.speak(utterThis); // Reproduce la frase en voz alta
-  utterThis.onend = function() {
-    console.log("La frase fue leída.");
-  }
-}
-```
-
----
-
-### **3. Explicación del Código**
-
-1. **Interfaz de Usuario**:
-   - Creamos botones para cada palabra que el usuario puede seleccionar. Cuando se hace clic en una palabra, se agrega a la lista `selectedWords`.
+4. **Ejecutar el servidor**
+   ```sh
+   node server.js
+   ```
    
-2. **Generar la Frase**:
-   - Al presionar el botón "Generar Frase", se concatenan las palabras seleccionadas y se muestran en la pantalla.
-   
-3. **Lectura de la Frase**:
-   - La API de **SpeechSynthesis** permite leer en voz alta la frase generada.
-   
-4. **Efectos Visuales**:
-   - Se generan efectos visuales sencillos donde las palabras se desplazan y cambian de color en función de la frase generada.
+5. **Abrir el navegador**
+   - Visitar `http://localhost:3000` en distintos dispositivos para probar la pizarra colaborativa.
 
----
+### Enlaces y Recursos
+- [p5.js](https://p5js.org/)
+- [p5LiveMedia](https://itpnyu.github.io/p5LiveMedia/)
+- [Socket.IO](https://socket.io/)
 
-### **4. Escalabilidad del Proyecto**
-
-Este proyecto es solo la base, y puedes escalarlo de muchas formas. Algunas ideas para expandirlo:
-
-1. **Añadir más interacción**:
-   - Permitir que los usuarios escriban sus propias palabras en lugar de elegir solo de una lista predeterminada.
-   - Implementar más efectos visuales y sonoros que reaccionen en tiempo real a las palabras.
-
-2. **Guardar y Enviar por Correo**:
-   - Implementar una funcionalidad que permita guardar la obra de arte (imagen + audio) como archivo.
-   - Utilizar servicios como **EmailJS** o crear un backend sencillo para enviar el correo con los archivos adjuntos.
-
-3. **Más Personalización**:
-   - Permitir que los usuarios personalicen el fondo, la tipografía y el estilo de los efectos visuales.
-   - Ofrecer una opción para elegir voces diferentes para la lectura de la frase.
-
----
-
-### **5. Recursos Adicionales y Enlaces**
-
-- [Documentación de p5.js](https://p5js.org/reference/)
-- [SpeechSynthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
-- [EmailJS (enviar correo desde navegador)](https://www.emailjs.com/)
-
----
-
-
+### Prueba la Pizarra colaborativa 
+<a href="https://effective-space-waffle-5gg6g6p94rr7hp76q-3000.app.github.dev/desktop/index.html" target="_blank">Acceder a la aplicación</a>
