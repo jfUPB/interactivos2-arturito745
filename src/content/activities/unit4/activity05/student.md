@@ -1,7 +1,7 @@
 **Autoevaluación de la Unidad**
 
 ### ¿Qué conceptos nuevos aprendí en esta unidad?
-En esta unidad aprendí sobre **Socket.IO** y **WebSocket**, conceptos clave para la comunicación en tiempo real entre clientes y servidores. También exploré la integración de estas tecnologías con la biblioteca **p5LiveMedia** para crear experiencias interactivas en la web.
+En esta unidad aprendí sobre **Socket.IO** y **WebSocket**, y **webRTC** conceptos clave para la comunicación en tiempo real entre clientes y servidores. También exploré la integración de estas tecnologías con la biblioteca **p5LiveMedia** para crear experiencias interactivas en la web.
 
 ### ¿Qué conceptos de la unidad me resultaron más fáciles de entender?
 El uso de la biblioteca **p5LiveMedia** me pareció bastante intuitivo. Pude comprender rápidamente cómo enviar y recibir datos en tiempo real utilizando esta herramienta. Además, la implementación de eventos en **Socket.IO** fue sencilla una vez que entendí la estructura básica del servidor y cliente.
