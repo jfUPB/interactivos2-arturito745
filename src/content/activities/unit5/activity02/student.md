@@ -1,3 +1,9 @@
+
+
+
+
+
+
 Aquí tienes la versión mejorada con la mecánica de votación a través de un enlace web y los **checkpoints de progresión** en la votación:  
 
 ---
@@ -27,22 +33,26 @@ Cada vez que se alcanza un checkpoint, se activan cambios en la experiencia:
 🎯 **Checkpoint 1 - Activación Inicial:**  
 - **Las esculturas comienzan a iluminarse suavemente**, destacando su silueta.  
 - **Las primeras flores del jardín empiezan a abrirse lentamente.**  
+   ![image](https://github.com/user-attachments/assets/1e69231a-2665-4149-a184-75be3304bf6a)
 
 🎯 **Checkpoint 2 - Escena Dinámica:**  
 - **Las luces del escenario se intensifican**, realzando la presencia del artista.  
 - **La pantalla gigante detrás del artista cobra vida**, mostrando sutiles animaciones inspiradas en la fragancia.  
 - **Más flores se abren y la escultura brilla con más intensidad.**  
+![image](https://github.com/user-attachments/assets/9936ce51-6123-412a-9790-32ced1bcff4f)
 
 🎯 **Checkpoint 3 - Impacto Sensorial:**  
 - **Las esculturas se iluminan completamente**, reflejando la aceptación del perfume.  
 - **Las flores están casi totalmente abiertas, bañando el espacio con luz dorada.**  
 - **La pantalla grande cambia a un efecto envolvente**, mostrando los ingredientes clave de la fragancia de manera artística.  
+![image](https://github.com/user-attachments/assets/97e360e2-b625-462c-b51f-d85c117c0263)
 
 🎯 **Checkpoint Final - Clímax de la Experiencia:**  
 - **Las esculturas alcanzan su brillo máximo, representando el éxito de la fragancia.**  
 - **Las flores están completamente abiertas, simbolizando la revelación de la esencia del perfume.**  
 - **El escenario se ilumina con un efecto especial sincronizado con la última nota de la canción del artista.**  
 - **La pantalla gigante proyecta la imagen final de la fragancia, cerrando con un efecto visual icónico.**  
+![image](https://github.com/user-attachments/assets/d5175875-9c62-4083-9563-a7e694850363)
 
 ## **3. Dispositivos y Tecnología Conectada**  
 El evento contará con **mínimo 4 dispositivos interconectados** que manejarán la experiencia en vivo:  
@@ -67,4 +77,3 @@ El evento contará con **mínimo 4 dispositivos interconectados** que manejarán
 Este evento no solo presentará un producto, sino que convertirá a los asistentes en **protagonistas de la experiencia**, logrando que la fragancia cobre vida a través de su participación. 🚀✨  
 
 ---
-
