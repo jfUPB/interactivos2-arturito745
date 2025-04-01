@@ -1,79 +1,84 @@
-
-
-
-
-
-
-Aquí tienes la versión mejorada con la mecánica de votación a través de un enlace web y los **checkpoints de progresión** en la votación:  
+**MONTBLANC SENSORY: MIRAR LO QUE HUELES**
 
 ---
 
-# **Montblanc Scent Experience: Un Lanzamiento Inmersivo**  
+### **INTRODUCCIÓN**
+El lanzamiento de la nueva fragancia de Montblanc será un **evento privado exclusivo**, donde el arte, la tecnología y la participación del público se fusionan en una experiencia sensorial inolvidable.
 
-## **1. Introducción: Un Evento Sensorial e Interactivo**  
-El lanzamiento de la nueva fragancia de **Montblanc** será una experiencia en vivo donde el arte, la tecnología y la participación del público se fusionan en una presentación inolvidable.  
+Al ingresar, los invitados descubrirán un **escenario elegante y enigmático**:
+- En el centro, un **artista de renombre** inicia su show en vivo sobre una tarima minimalista.
+- A sus lados, **dos esculturas monumentales** del perfume, rodeadas de un **jardín de flores mecánicas** cerradas y apagadas.
+- **Luces tenues, efectos de humo y una banda sonora envolvente** preparan el ambiente para la revelación.
 
-Al ingresar al evento, los asistentes serán testigos de un escenario elegante y enigmático:  
-- En el centro, un **artista reconocido** inicia su show sobre una tarima especial.  
-- A su lado, dos **esculturas monumentales del perfume**, situadas sobre un **jardín de flores cerradas y apagadas**.  
-- **Luces bajas, efectos de humo y un ambiente envolvente** preparan el escenario para la revelación.  
+Al finalizar su presentación, el artista da inicio a la experiencia, titulada **"Mirada hacia el olfato"**. En ese momento, un **difusor tipo humidificador** libera la fragancia en el aire, marcando el comienzo de la interacción. En la pantalla principal aparece una animación de un mensaje en un móvil.
 
-Pero aquí, el público **no solo observa, sino que participa activamente** en la evolución del evento.  
-
-## **2. La Votación Interactiva y la Transformación del Espacio**  
-A través de un **enlace web de votación**, los asistentes acceden a una página interactiva con **tres opciones**:  
-✅ **Me encanta**  
-✅ **Me gusta**  
-✅ **No me gusta**  
-
-En la página, una **barra de progreso** con diferentes **checkpoints** representa el avance de la votación en tiempo real.  
-
-Cada vez que se alcanza un checkpoint, se activan cambios en la experiencia:  
-
-🎯 **Checkpoint 1 - Activación Inicial:**  
-- **Las esculturas comienzan a iluminarse suavemente**, destacando su silueta.  
-- **Las primeras flores del jardín empiezan a abrirse lentamente.**  
-   ![image](https://github.com/user-attachments/assets/1e69231a-2665-4149-a184-75be3304bf6a)
-
-🎯 **Checkpoint 2 - Escena Dinámica:**  
-- **Las luces del escenario se intensifican**, realzando la presencia del artista.  
-- **La pantalla gigante detrás del artista cobra vida**, mostrando sutiles animaciones inspiradas en la fragancia.  
-- **Más flores se abren y la escultura brilla con más intensidad.**  
-![image](https://github.com/user-attachments/assets/9936ce51-6123-412a-9790-32ced1bcff4f)
-
-🎯 **Checkpoint 3 - Impacto Sensorial:**  
-- **Las esculturas se iluminan completamente**, reflejando la aceptación del perfume.  
-- **Las flores están casi totalmente abiertas, bañando el espacio con luz dorada.**  
-- **La pantalla grande cambia a un efecto envolvente**, mostrando los ingredientes clave de la fragancia de manera artística.  
-![image](https://github.com/user-attachments/assets/97e360e2-b625-462c-b51f-d85c117c0263)
-
-🎯 **Checkpoint Final - Clímax de la Experiencia:**  
-- **Las esculturas alcanzan su brillo máximo, representando el éxito de la fragancia.**  
-- **Las flores están completamente abiertas, simbolizando la revelación de la esencia del perfume.**  
-- **El escenario se ilumina con un efecto especial sincronizado con la última nota de la canción del artista.**  
-- **La pantalla gigante proyecta la imagen final de la fragancia, cerrando con un efecto visual icónico.**  
-![image](https://github.com/user-attachments/assets/d5175875-9c62-4083-9563-a7e694850363)
-
-## **3. Dispositivos y Tecnología Conectada**  
-El evento contará con **mínimo 4 dispositivos interconectados** que manejarán la experiencia en vivo:  
-
-1️⃣ **Desktop principal:** Recibe los votos del público desde la página web y procesa la información.  
-2️⃣ **Cliente Desktop 1:** Controla la apertura de las flores y la iluminación progresiva de las esculturas según los checkpoints alcanzados.  
-3️⃣ **Cliente Desktop 2:** Desde **Codespaces**, gestiona los cambios en la pantalla gigante, activando animaciones que evolucionan con la votación.  
-4️⃣ **Dispositivos móviles:** Permiten que el público acceda a la votación desde el enlace web.  
-
-## **4. Implementación Tecnológica**  
-- **Sockets UDP** para comunicación en tiempo real.  
-- **Máquinas de estado** para gestionar los diferentes checkpoints de votación.  
-- **Animaciones interactivas en la pantalla grande**, sincronizadas con el avance de la experiencia.  
-- **Iluminación programada** para transformar el ambiente de manera progresiva.  
-- **Diseño de interacción web**, con una experiencia fluida para la votación.  
-
-## **5. Cierre del Evento**  
-✨ **Al finalizar la presentación, las esculturas y el jardín quedarán en su máximo esplendor.**  
-✨ **Un último destello de luces marcará el éxito de la nueva fragancia.**  
-✨ **La pantalla gigante proyectará el logo de Montblanc y el frasco del perfume, dejando una imagen inolvidable.**  
-
-Este evento no solo presentará un producto, sino que convertirá a los asistentes en **protagonistas de la experiencia**, logrando que la fragancia cobre vida a través de su participación. 🚀✨  
+Cada invitado recibe un enlace en su dispositivo con el mensaje: **"Ingresa aquí"**, que los llevará a una interfaz donde podrán elegir los aromas que perciben.
 
 ---
+
+### **FLUJO DE LA EXPERIENCIA**
+
+#### **Interacción**
+1. Cada invitado selecciona **4 de 8 notas olfativas** (cítricos, flores, vainilla, etc.).
+2. En ese momento, **las pantallas y el espacio comienzan a mostrar una obra de arte generativo**, visualizando en tiempo real los inputs enviados por los usuarios a un cliente desktop.
+3. **Los colores y animaciones reflejan cada nota**, fusionándose con las demás y creando una composición única impulsada por el público.
+4. Después de elegir las notas, cada invitado puede votar:  
+   - ❤️ "Me encantó"
+   - 👍 "Me gustó"
+   - 👎 "No me gustó"
+
+#### **Progreso y Checkpoints**
+El progreso de la votación se muestra en pantalla, desbloqueando momentos interactivos a medida que se alcanzan los checkpoints:
+- **20%**: Las esculturas comienzan a iluminarse + la obra generativa sigue evolucionando.
+- **50%**: El jardín se enciende + mezcla de partículas visuales.
+- **70%**: Las flores comienzan a abrirse + aroma parcial.
+- **100% (Clímax)**: **Flores totalmente abiertas + explosión de fragancia y luz.**
+
+La pantalla muestra en tiempo real el porcentaje de avance hacia cada checkpoint, informando a los asistentes cuando se alcanza un nuevo nivel y cómo cambia el comportamiento de las esculturas.
+
+#### **Feedback Final**
+Al finalizar la experiencia, cada invitado recibe en su móvil un **porcentaje de acierto** con respecto a la fórmula real, informándoles **qué tan cerca estuvieron de descifrar las notas principales de la fragancia**.
+
+---
+
+### **FASE DE CIERRE**
+Las luces comienzan a atenuarse y en la pantalla principal aparece la frase final:
+
+**"Montblanc: el aroma que se ve."**
+
+Una ejecutiva de Montblanc toma la palabra, agradeciendo a los asistentes por su participación y destacando el papel del público en la creación de una experiencia única. A partir de este momento, la fiesta continúa, permitiendo que los invitados disfruten del ambiente y sigan explorando la fragancia en un entorno más relajado.
+
+---
+
+### **TECNOLOGÍA Y DISPOSITIVOS INTERCONECTADOS**
+El evento contará con un sistema en vivo con **mínimo 4 dispositivos coordinados** para manejar la experiencia interactiva:
+1. **Desktop principal**: Recibe en tiempo real las selecciones y votos del público desde la plataforma web, procesando la información y distribuyéndola a los demás dispositivos.
+2. **Cliente Desktop 1**: Controla la apertura de las flores mecánicas y la iluminación progresiva de las esculturas según los checkpoints alcanzados.
+3. **Cliente Desktop 2**: Desde Codespaces, gestiona los cambios en la pantalla gigante, activando animaciones generativas que evolucionan con las combinaciones de notas seleccionadas.
+4. **Dispositivos móviles**: Permiten que cada invitado participe en la experiencia, eligiendo notas olfativas y votando por su percepción del aroma.
+
+---
+
+### **RESUMEN DE INPUTS Y OUTPUTS**
+
+#### **Inputs (Entradas)**
+- **Selección de notas olfativas** (4 de 8 opciones) por cada invitado.
+- **Votación emocional**: ❤️ "Me encantó", 👍 "Me gustó", 👎 "No me gustó".
+- **Cantidad de participantes** interactuando en tiempo real.
+
+#### **Outputs (Salidas)**
+- **Visualización generativa en pantallas** con colores y animaciones dinámicas basadas en las notas elegidas.
+- **Apertura progresiva de las flores mecánicas** según los checkpoints.
+- **Iluminación y efectos en las esculturas** de acuerdo con el avance de la experiencia.
+- **Difusión de la fragancia** en el ambiente.
+- **Feedback individual en móviles** con el % de coincidencia con la fórmula real.
+
+#### **Relación entre Inputs y Outputs**
+- **Inputs de notas olfativas** → Generan la obra de arte generativa en pantallas y modifican el ambiente sensorial.
+- **Inputs de votación** → Influyen en el feedback final y en la representación visual de la opinión del público.
+- **Inputs de cantidad de participantes** → Determinan la rapidez con la que se alcanzan los checkpoints.
+- **Inputs de checkpoints alcanzados** → Desbloquean efectos físicos como iluminación, apertura de flores y difusión del aroma.
+
+**En resumen**, los asistentes son **cocreadores** de la experiencia y cada elección influye directamente en la evolución visual, física y sensorial del evento.
+
+
