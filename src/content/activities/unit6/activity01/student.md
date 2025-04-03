@@ -26,3 +26,21 @@ El proyecto "Montblanc Sensory: Mirar lo que hueles" es una experiencia inmersiv
    - La progresión de los efectos y la activación de dispositivos refuerzan la idea de que el aroma "cobra vida" a medida que se experimenta.
    - El clímax se alcanza con la apertura total de las flores y la máxima intensidad de la fragancia, representando el punto culminante de la conexión entre percepción y realidad.
 
+## Frases 
+
+### **Input:**  
+1. Cada invitado elige cuatro notas olfativas en su celular, enviando su percepción al sistema en tiempo real.  
+2. Con un simple voto, los asistentes expresan su reacción ante la fragancia: les encantó, les gustó o no les convenció.  
+
+### **Process:**  
+3. El sistema recopila todas las elecciones y las transforma en una visualización dinámica, donde los colores y formas reflejan las notas seleccionadas.  
+4. A medida que más personas participan, la experiencia evoluciona: la iluminación cambia, los efectos visuales se intensifican y el ambiente se llena de aroma.  
+
+### **Output:**  
+5. Cuando se alcanzan ciertos niveles de participación, las esculturas se iluminan, las flores mecánicas se abren y la fragancia se libera con mayor intensidad.  
+6. Cada asistente recibe en su celular un resumen personalizado con su porcentaje de acierto en la identificación de la fragancia.  
+
+### **Storytelling:**  
+7. Desde el inicio, la experiencia envuelve a los invitados en un juego sensorial donde el aroma se convierte en imagen y acción.  
+8. La historia concluye cuando todos han dejado su huella en la experiencia, mostrando que el perfume no solo se huele, sino que también se vive.  
+
