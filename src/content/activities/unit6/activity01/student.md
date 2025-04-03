@@ -1,4 +1,7 @@
-**Resumen breve del proyecto**
+######
+
+# **Resumen breve del proyecto**
+
 El proyecto "Montblanc Sensory: Mirar lo que hueles" es una experiencia inmersiva que combina arte, tecnología y participación del público en el lanzamiento de una fragancia. A través de una interfaz interactiva, los asistentes eligen notas olfativas y votan su percepción del aroma, generando una visualización en tiempo real que influye en la iluminación, los efectos visuales y la activación de dispositivos físicos como flores mecánicas y difusores de fragancia.
 
 **Componentes del IPO en el diseño algorítmico**
