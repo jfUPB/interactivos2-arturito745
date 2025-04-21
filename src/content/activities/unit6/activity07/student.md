@@ -1,6 +1,3 @@
-Aquí tienes el esquema completo de la actividad **“Preparación para la implementación (Planificación)”** redactado en **primera persona**, con tono técnico y estructurado, listo para tu bitácora de estudiante:
-
----
 
 # **Preparación para la implementación (Planificación)**  
 **Unidad 6 – Reflexión y Planificación para Unidad 7**
