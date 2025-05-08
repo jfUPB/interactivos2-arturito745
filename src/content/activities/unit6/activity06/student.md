@@ -65,3 +65,6 @@
 - Requiere atención especial al control del tiempo y la sincronía para que las visualizaciones no se saturen.
 
 ---
+## Visuales de la experiencia 
+
+[Ver Video aquí](https://upbeduco-my.sharepoint.com/:v:/g/personal/ricardo_guerreroo_upb_edu_co/EQ8xU31FuIlFj6rBgkM1w-gBPBxuOOUf_p1FFsdUSAleWg?e=moDYbN)
