@@ -1,4 +1,7 @@
 mi-proyecto-unidad7/
+
+En esta aplicación estamos utilizando tecnologías web modernas como **Node.js** para crear el servidor, **Socket.IO** para la comunicación en tiempo real entre el servidor y los clientes, y **p5.js** para la visualización gráfica de las mezclas de notas. Además, usamos **HTML y JavaScript** en el cliente, y organizamos todo el contenido visual en la carpeta `public`, cumpliendo con una estructura limpia y funcional para aplicaciones interactivas en red.
+
 ```
 │
 ├── public/                  ← Carpeta para cliente p5.js
