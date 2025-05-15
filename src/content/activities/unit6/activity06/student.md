@@ -1,6 +1,3 @@
-
----
-
 ### **Autoevaluación del Diseño Algorítmico**
 
 #### 1. Claridad y definición
